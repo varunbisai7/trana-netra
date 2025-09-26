@@ -80,7 +80,7 @@ export const AlertsPanel = () => {
       
       // Send test alerts via edge functions
       await Promise.all([
-        fetch(`/api/send-sms`, {
+        fetch('https://api-send-sms.onrender.com/send-sms', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -88,7 +88,7 @@ export const AlertsPanel = () => {
             message: testMessage
           })
         }),
-        fetch(`/api/send-email`, {
+        /* fetch(`/api/send-email`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -96,7 +96,7 @@ export const AlertsPanel = () => {
             subject: 'Trana Netra Test Alert',
             message: testMessage
           })
-        })
+        }) */
       ]);
 
       toast({
