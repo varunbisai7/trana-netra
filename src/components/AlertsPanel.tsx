@@ -84,8 +84,8 @@ export const AlertsPanel = () => {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            phone: adminMobile,
-            message: testMessage
+            to: adminMobile,
+            body: testMessage
           })
         }),
         /* fetch(`/api/send-email`, {
