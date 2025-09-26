@@ -79,7 +79,6 @@ export const AlertsPanel = () => {
       const testMessage = `⚠️ Trana Netra Test Alert: This is a test message from the alert system. Your contact details are working correctly. Timestamp: ${new Date().toLocaleString()}`;
       
       // Send test alerts via edge functions
-      console.log('API Called);
       await Promise.all([
         fetch('https://api-send-sms.onrender.com/send-sms', {
           method: 'POST',
@@ -99,7 +98,6 @@ export const AlertsPanel = () => {
           })
         }) */
       ]);
-      console.log('Api ended');
 
       toast({
         title: "Test Alert Sent",
